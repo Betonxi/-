@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+openai
+pandas
+matplotlib
+pdfplumber
+lxml
+openpyxl
+scikit-learn
+numpy
