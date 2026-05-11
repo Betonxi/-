@@ -1,0 +1,206 @@
+[
+  {
+    "stock_code": "000999",
+    "report_period": "2023Q3",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2022FY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2025HY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.6264832732835577e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2025Q1",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2024HY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2025Q3",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2024Q1",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2023Q1",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2023FY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.3802762417144085e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2024Q3",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.1421686602017546e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2023Q3",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2025HY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2024FY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.4758002139755398e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2023HY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.1981334035313063e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2022FY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2024HY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.1441796611949302e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2025Q1",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2024Q1",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.6035051635022e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2025Q3",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 0.0,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2023FY",
+    "issues": [],
+    "checks": {}
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2024Q3",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.5649074575001633e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "000999",
+    "report_period": "2023Q1",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.2293111982693123e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  },
+  {
+    "stock_code": "600080",
+    "report_period": "2023HY",
+    "issues": [],
+    "checks": {
+      "balance_equation_rel_pct": 1.5008179246279544e-14,
+      "asset_liability_ratio_abs_diff": 0.0
+    }
+  }
+]

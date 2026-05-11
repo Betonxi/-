@@ -1,0 +1,1839 @@
+[
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230428_FQ2V.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2022FY"
+    ],
+    "unit": "元",
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230428_MMWM.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2022FY"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230428_MMWM.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2022FY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表",
+      "母公司资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 2189.879489,
+      "asset_total_assets": 187018.807355,
+      "liability_accounts_payable": 1574.087237,
+      "liability_contract_liabilities": 377.858034,
+      "liability_total_liabilities": 21397.035486,
+      "equity_unappropriated_profit": 45091.366076,
+      "equity_total_equity": 165621.77186900002
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230428_MMWM.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2022FY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并利润表",
+      "母公司利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 53403.650095,
+      "operating_expense_cost_of_sales": 13419.51033,
+      "operating_expense_selling_expenses": 31505.650552,
+      "operating_expense_administrative_expenses": 4972.219026,
+      "operating_expense_financial_expenses": -67.509649,
+      "operating_expense_rnd_expenses": 1565.57762,
+      "operating_expense_taxes_and_surcharges": 1279.9772970000001,
+      "total_operating_expenses": 52675.425176,
+      "operating_profit": 4384.358813,
+      "total_profit": -2373.490214,
+      "other_income": 56.201205,
+      "credit_impairment_loss": 173.422515,
+      "net_profit": -1816.045212
+    },
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230428_MMWM.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2022FY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "母公司现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 56241.28601900001,
+      "operating_cf_net_amount": 3703.6799899999996,
+      "investing_cf_cash_from_investment_recovery": 3551.181694,
+      "investing_cf_cash_for_investments": 5773.0,
+      "investing_cf_net_amount": -15287.594047999999,
+      "financing_cf_cash_for_debt_repayment": 5000.0,
+      "financing_cf_net_amount": -8684.432563,
+      "net_cash_flow": -202683466.21
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230428_PCK7.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2023Q1"
+    ],
+    "unit": "元",
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230428_PCK7.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2023Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表"
+    ],
+    "prev": {
+      "asset_accounts_receivable": 12262.102169,
+      "asset_inventory": 2515.061956,
+      "asset_construction_in_progress": 19728.442047999997,
+      "asset_total_assets": 197441.863197,
+      "liability_accounts_payable": 1570.2536949999999,
+      "liability_contract_liabilities": 661.0514410000001,
+      "liability_total_liabilities": 29065.324841,
+      "equity_unappropriated_profit": 48093.579652,
+      "equity_total_equity": 168376.538356
+    },
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230428_PCK7.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2023Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 11919.984112999999,
+      "operating_expense_cost_of_sales": 2894.92744,
+      "operating_expense_selling_expenses": 6915.7562530000005,
+      "operating_expense_administrative_expenses": 1377.119032,
+      "operating_expense_financial_expenses": -420.363681,
+      "operating_expense_rnd_expenses": 163.20542,
+      "operating_expense_taxes_and_surcharges": 303.286169,
+      "total_operating_expenses": 11233.930633,
+      "operating_profit": 1055.434718,
+      "total_profit": 1048.296121,
+      "other_income": 67.483811,
+      "credit_impairment_loss": 62.112616,
+      "net_profit": 928.014236
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230428_PCK7.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2023Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_net_amount": 1307.062582,
+      "investing_cf_cash_from_investment_recovery": 2802.76143,
+      "investing_cf_cash_for_investments": 6000.0,
+      "investing_cf_net_amount": 6261.52591,
+      "financing_cf_net_amount": -15.767945000000001,
+      "net_cash_flow": 75528205.47
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230819_DNUE.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2023HY"
+    ],
+    "unit": "元",
+    "tables": 5
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230819_U8CH.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2023HY"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230819_U8CH.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2023HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表",
+      "母公司资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 2828.69397,
+      "asset_total_assets": 197441.863197,
+      "liability_accounts_payable": 1570.2536949999999,
+      "liability_contract_liabilities": 661.0514410000001,
+      "liability_total_liabilities": 29065.324841,
+      "equity_unappropriated_profit": 48093.579652,
+      "equity_total_equity": 168376.538356
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230819_U8CH.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2023HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并利润表",
+      "母公司利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 25871.933277,
+      "operating_expense_cost_of_sales": 6050.5110859999995,
+      "operating_expense_selling_expenses": 14832.240690999999,
+      "operating_expense_administrative_expenses": 3158.19162,
+      "operating_expense_financial_expenses": -281.61492799999996,
+      "operating_expense_rnd_expenses": 396.155985,
+      "operating_expense_taxes_and_surcharges": 462.25923200000005,
+      "total_operating_expenses": 24617.743686,
+      "operating_profit": 2510.392643,
+      "total_profit": 2445.3811769999998,
+      "other_income": 80.278811,
+      "asset_impairment_loss": -7.185712,
+      "credit_impairment_loss": 49.863582
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20230819_U8CH.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2023HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并现金流量表",
+      "母公司现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 27541.097251,
+      "operating_cf_net_amount": 2425.324716,
+      "investing_cf_cash_from_investment_recovery": 5811.101323,
+      "investing_cf_cash_for_investments": 7680.0,
+      "investing_cf_net_amount": 2411.085587,
+      "net_cash_flow": 48364103.03
+    },
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20231028_F42E.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2023Q3"
+    ],
+    "unit": "元",
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20231028_F42E.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2023Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表"
+    ],
+    "prev": {
+      "asset_total_assets": 197441.863197,
+      "liability_accounts_payable": 1570.2536949999999,
+      "liability_contract_liabilities": 661.0514410000001,
+      "liability_total_liabilities": 29065.324841,
+      "equity_unappropriated_profit": 48093.579652,
+      "equity_total_equity": 168376.538356
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20231028_F42E.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2023Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 42315.037439,
+      "operating_expense_cost_of_sales": 9931.109949,
+      "operating_expense_selling_expenses": 24775.443088,
+      "operating_expense_administrative_expenses": 4422.472947,
+      "operating_expense_financial_expenses": -375.371637,
+      "operating_expense_rnd_expenses": 642.2923400000001,
+      "operating_expense_taxes_and_surcharges": 832.3141049999999,
+      "total_operating_expenses": 40228.260792,
+      "operating_profit": 3408.958885,
+      "total_profit": 3770.348511,
+      "other_income": 111.447879,
+      "credit_impairment_loss": -108.087616,
+      "net_profit": 3182.943297
+    },
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20231028_F42E.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2023Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 42516.18093,
+      "operating_cf_net_amount": -929.738675,
+      "investing_cf_cash_from_investment_recovery": 5811.101323,
+      "investing_cf_cash_for_investments": 7780.0,
+      "investing_cf_net_amount": 6416.618936,
+      "financing_cf_net_amount": -17.653076000000002,
+      "net_cash_flow": 54692271.85
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240427_0WKP.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2023FY"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240427_0WKP.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2023FY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表",
+      "母公司资产负债表"
+    ],
+    "prev": {
+      "asset_total_assets": 197441.863197,
+      "liability_accounts_payable": 1570.2536949999999,
+      "liability_contract_liabilities": 661.0514410000001,
+      "liability_total_liabilities": 29065.324841,
+      "equity_unappropriated_profit": 48093.579652,
+      "equity_total_equity": 168376.538356
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240427_IBMB.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2024Q1"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240427_IBMB.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2024Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表"
+    ],
+    "prev": {
+      "asset_total_assets": 210855.114195,
+      "liability_accounts_payable": 928.4769699999999,
+      "liability_contract_liabilities": 71.870823,
+      "liability_total_liabilities": 47012.46165,
+      "equity_unappropriated_profit": 44438.412777,
+      "equity_total_equity": 163842.65254500002
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240427_IBMB.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2024Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 10825.951244,
+      "operating_expense_cost_of_sales": 2871.278318,
+      "operating_expense_selling_expenses": 6191.34557,
+      "operating_expense_administrative_expenses": 1770.8438350000001,
+      "operating_expense_financial_expenses": -83.722371,
+      "operating_expense_rnd_expenses": 208.917564,
+      "operating_expense_taxes_and_surcharges": 212.734244,
+      "total_operating_expenses": 11171.397159999999,
+      "operating_profit": 497.69761100000005,
+      "total_profit": 490.645995,
+      "other_income": 0.795,
+      "credit_impairment_loss": 49.531121999999996,
+      "net_profit": 468.09353600000003
+    },
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240427_IBMB.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2024Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 11141.675612000001,
+      "operating_cf_net_amount": -3876.0097979999996,
+      "investing_cf_cash_from_investment_recovery": 4385.03769,
+      "investing_cf_cash_for_investments": 3700.0,
+      "investing_cf_net_amount": 3936.608957,
+      "financing_cf_cash_from_borrowing": 9900.0,
+      "financing_cf_net_amount": 9873.696461,
+      "net_cash_flow": 99342956.2
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240427_W39O.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2023FY"
+    ],
+    "unit": "元",
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240817_5X5X.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2024HY"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240817_5X5X.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2024HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表",
+      "母公司资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 11083.145859999999,
+      "asset_total_assets": 210855.114195,
+      "liability_accounts_payable": 928.4769699999999,
+      "liability_contract_liabilities": 71.870823,
+      "liability_total_liabilities": 47012.46165,
+      "equity_unappropriated_profit": 44438.412777,
+      "equity_total_equity": 163842.65254500002
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240817_5X5X.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2024HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 26076.045174000003,
+      "operating_cf_net_amount": -3439.1321390000003
+    },
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20240817_6AW9.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2024HY"
+    ],
+    "unit": "元",
+    "tables": 5
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20241030_XN72.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2024Q3"
+    ],
+    "unit": "元",
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20241030_XN72.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2024Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 11083.145859999999,
+      "asset_total_assets": 210855.114195,
+      "liability_accounts_payable": 928.4769699999999,
+      "liability_contract_liabilities": 71.870823,
+      "liability_total_liabilities": 47012.46165,
+      "equity_unappropriated_profit": 44438.412777,
+      "equity_total_equity": 163842.65254500002
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20241030_XN72.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2024Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 40280.503175,
+      "operating_expense_cost_of_sales": 9291.415305,
+      "operating_expense_selling_expenses": 24088.989091,
+      "operating_expense_administrative_expenses": 5162.776233,
+      "operating_expense_financial_expenses": -157.366254,
+      "operating_expense_rnd_expenses": 886.027209,
+      "operating_expense_taxes_and_surcharges": 686.4660769999999,
+      "total_operating_expenses": 39958.307661,
+      "operating_profit": 2055.6716,
+      "total_profit": 193.603353,
+      "other_income": 22.235042,
+      "credit_impairment_loss": 640.421178,
+      "net_profit": 339.02983
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20241030_XN72.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2024Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 40935.379393,
+      "operating_cf_net_amount": -1194.931466,
+      "investing_cf_net_amount": -4851.472524,
+      "financing_cf_cash_from_borrowing": 17540.539044,
+      "financing_cf_cash_for_debt_repayment": 9900.0,
+      "financing_cf_net_amount": 6736.6210200000005,
+      "net_cash_flow": 6902170.3
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250425_6GSD.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2025Q1"
+    ],
+    "unit": "元",
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250425_6GSD.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2025Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表"
+    ],
+    "prev": {
+      "asset_total_assets": 197207.11639100002,
+      "liability_accounts_payable": 781.883682,
+      "liability_contract_liabilities": 97.38180799999999,
+      "liability_short_term_loans": 3455.661307,
+      "liability_total_liabilities": 41258.740560000006,
+      "equity_unappropriated_profit": 51210.578539,
+      "equity_total_equity": 155948.37583099998
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250425_6GSD.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2025Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 11578.927068,
+      "operating_expense_cost_of_sales": 2714.308924,
+      "operating_expense_selling_expenses": 6521.833135,
+      "operating_expense_administrative_expenses": 1366.810489,
+      "operating_expense_financial_expenses": -68.630782,
+      "operating_expense_rnd_expenses": 232.953304,
+      "operating_expense_taxes_and_surcharges": 139.719674,
+      "total_operating_expenses": 10906.994744,
+      "operating_profit": 2827.019302,
+      "total_profit": 2790.534078,
+      "other_income": 20.795,
+      "credit_impairment_loss": -759.892679,
+      "net_profit": 2396.242714
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250425_6GSD.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2025Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_net_amount": -4921.284823,
+      "investing_cf_net_amount": -10078.275169,
+      "financing_cf_cash_from_borrowing": 20652.268902,
+      "financing_cf_cash_for_debt_repayment": 18535.309668,
+      "financing_cf_net_amount": -10674.621365,
+      "net_cash_flow": -256741813.57
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250425_LXGH.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2024FY"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250425_LXGH.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2024FY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表",
+      "母公司资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 11083.145859999999,
+      "asset_total_assets": 210855.114195,
+      "liability_accounts_payable": 928.4769699999999,
+      "liability_contract_liabilities": 71.870823,
+      "liability_total_liabilities": 47012.46165,
+      "equity_unappropriated_profit": 44438.412777,
+      "equity_total_equity": 163842.65254500002
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250425_LXGH.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2024FY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 利润表及现金流量表相关科目变动分析表",
+      "合并利润表",
+      "母公司利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 56540.341011000004,
+      "operating_expense_cost_of_sales": 13375.203790000001,
+      "operating_expense_selling_expenses": 34243.074213,
+      "operating_expense_administrative_expenses": 7247.941689,
+      "operating_expense_financial_expenses": -119.619091,
+      "operating_expense_rnd_expenses": 1508.976504,
+      "operating_expense_taxes_and_surcharges": 833.926882,
+      "total_operating_expenses": 57089.503987000004,
+      "operating_profit": -3289.987634,
+      "total_profit": -4105.4617259999995,
+      "other_income": 93.343972,
+      "credit_impairment_loss": 836.01613,
+      "net_profit": -4289.058025
+    },
+    "tables": 18
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250425_LXGH.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2024FY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 利润表及现金流量表相关科目变动分析表",
+      "合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_net_amount": 6054.842538,
+      "investing_cf_cash_from_investment_recovery": 13989.0,
+      "investing_cf_cash_for_investments": 16600.0,
+      "investing_cf_net_amount": 13776.085637999999,
+      "financing_cf_cash_from_borrowing": 17540.539044,
+      "financing_cf_cash_for_debt_repayment": 17540.539044,
+      "financing_cf_net_amount": -1121.519526,
+      "net_cash_flow": 187094086.5
+    },
+    "tables": 5
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250425_P7ID.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2024FY"
+    ],
+    "unit": "元",
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250822_ABVM.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2025HY"
+    ],
+    "unit": "元",
+    "tables": 5
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250822_ODWZ.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2025HY"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250822_ODWZ.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2025HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表",
+      "母公司资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 37369.070738999995,
+      "asset_total_assets": 197207.11639100002,
+      "liability_accounts_payable": 781.883682,
+      "liability_contract_liabilities": 97.38180799999999,
+      "liability_short_term_loans": 3455.661307,
+      "liability_total_liabilities": 41258.740560000006,
+      "equity_unappropriated_profit": 51210.578539,
+      "equity_total_equity": 155948.37583099998
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250822_ODWZ.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2025HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并利润表",
+      "母公司利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 24596.548281,
+      "operating_expense_cost_of_sales": 5740.478682,
+      "operating_expense_selling_expenses": 14080.47134,
+      "operating_expense_administrative_expenses": 2473.715576,
+      "operating_expense_financial_expenses": -96.287596,
+      "operating_expense_rnd_expenses": 842.1920460000001,
+      "operating_expense_taxes_and_surcharges": 268.670079,
+      "total_operating_expenses": 23309.240127,
+      "operating_profit": 959.851111,
+      "total_profit": 924.980958,
+      "other_income": 94.235077,
+      "credit_impairment_loss": -772.755139,
+      "net_profit": 946.2893789999999
+    },
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20250822_ODWZ.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2025HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并现金流量表",
+      "母公司现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 27037.580699000002,
+      "operating_cf_net_amount": -2309.937207,
+      "investing_cf_net_amount": -17797.798507,
+      "financing_cf_cash_from_borrowing": 29823.485644999997,
+      "financing_cf_cash_for_debt_repayment": 25568.042868,
+      "financing_cf_net_amount": -11608.912678,
+      "net_cash_flow": -317166483.92
+    },
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20251030_IVCB.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "600080",
+      "2025Q3"
+    ],
+    "unit": "元",
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20251030_IVCB.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "600080",
+      "2025Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并资产负债表"
+    ],
+    "prev": {
+      "asset_inventory": 3190.14552,
+      "asset_construction_in_progress": 37369.070738999995,
+      "asset_total_assets": 197207.11639100002,
+      "liability_accounts_payable": 781.883682,
+      "liability_contract_liabilities": 97.38180799999999,
+      "liability_short_term_loans": 3455.661307,
+      "liability_total_liabilities": 41258.740560000006,
+      "equity_unappropriated_profit": 51210.578539,
+      "equity_total_equity": 155948.37583099998
+    },
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20251030_IVCB.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "600080",
+      "2025Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 41893.121976999995,
+      "operating_expense_cost_of_sales": 9223.41901,
+      "operating_expense_selling_expenses": 25071.748426,
+      "operating_expense_administrative_expenses": 3648.108757,
+      "operating_expense_financial_expenses": -158.955818,
+      "operating_expense_rnd_expenses": 2028.303238,
+      "operating_expense_taxes_and_surcharges": 396.05873399999996,
+      "total_operating_expenses": 40208.682347,
+      "operating_profit": 3285.41929,
+      "total_profit": 3245.72417,
+      "other_income": 437.80190300000004,
+      "credit_impairment_loss": -843.667525,
+      "net_profit": 3077.016528
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\600080_20251030_IVCB.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "600080",
+      "2025Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_net_amount": -75.866364,
+      "investing_cf_net_amount": -24629.118828,
+      "financing_cf_cash_from_borrowing": 29823.485644999997,
+      "financing_cf_cash_for_debt_repayment": 25568.042868,
+      "financing_cf_net_amount": -11606.524678,
+      "net_cash_flow": -363115098.7
+    },
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2022年年度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2022FY"
+    ],
+    "unit": "元",
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2022年年度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2022FY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表",
+      "2、 母公司资产负债表"
+    ],
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2022年年度报告摘要.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2022FY"
+    ],
+    "unit": "元",
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年一季度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2023Q1"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年一季度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2023Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表"
+    ],
+    "prev": {
+      "asset_total_assets": 2712278.169916,
+      "liability_accounts_payable": 144946.783906,
+      "liability_contract_liabilities": 101227.218752,
+      "liability_short_term_loans": 16850.0,
+      "liability_total_liabilities": 958936.699999,
+      "equity_unappropriated_profit": 1376143.538812,
+      "equity_total_equity": 1753341.4699169998
+    },
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年一季度报告.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "000999",
+      "2023Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "2、 合并利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 425022.659643,
+      "operating_expense_cost_of_sales": 192920.52263599998,
+      "operating_expense_selling_expenses": 97922.411676,
+      "operating_expense_administrative_expenses": 19117.650591999998,
+      "operating_expense_financial_expenses": -889.044329,
+      "operating_expense_rnd_expenses": 10415.117323999999,
+      "operating_expense_taxes_and_surcharges": 4642.362231,
+      "total_operating_expenses": 324129.02013,
+      "operating_profit": 102667.76105700001,
+      "total_profit": 102511.837286,
+      "other_income": 4865.031217,
+      "asset_impairment_loss": -1956.143728,
+      "credit_impairment_loss": -1528.208194,
+      "net_profit": 84078.91974099999
+    },
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年一季度报告.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "000999",
+      "2023Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "3、 合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_net_amount": 44942.495524,
+      "investing_cf_cash_from_investment_recovery": 44565.0,
+      "investing_cf_cash_for_investments": 40000.0,
+      "investing_cf_net_amount": -9128.289233,
+      "financing_cf_cash_from_borrowing": 2756.2946859999997,
+      "financing_cf_cash_for_debt_repayment": 2000.0,
+      "financing_cf_net_amount": 1375.127414,
+      "net_cash_flow": 371514041.12
+    },
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年三季度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2023Q3"
+    ],
+    "unit": "元",
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年三季度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2023Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表"
+    ],
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年三季度报告.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "000999",
+      "2023Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "2、 合并年初到报告期末利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 1211072.057608,
+      "operating_expense_cost_of_sales": 547704.180885,
+      "operating_expense_selling_expenses": 320167.186796,
+      "operating_expense_administrative_expenses": 66221.14939800001,
+      "operating_expense_financial_expenses": -1068.770926,
+      "operating_expense_rnd_expenses": 35278.986338,
+      "operating_expense_taxes_and_surcharges": 13188.274111,
+      "total_operating_expenses": 981491.0066020001,
+      "operating_profit": 242205.856838,
+      "total_profit": 242765.38385900002,
+      "other_income": 16043.112925,
+      "asset_impairment_loss": -3467.477333,
+      "credit_impairment_loss": -2992.535275,
+      "net_profit": 197818.80014500002
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年三季度报告.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "000999",
+      "2023Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "3、 合并年初到报告期末现金流量表"
+    ],
+    "prev": {
+      "operating_cf_net_amount": 201786.483275,
+      "investing_cf_cash_from_investment_recovery": 231947.828047,
+      "investing_cf_cash_for_investments": 300000.555556,
+      "investing_cf_net_amount": -123987.129073,
+      "financing_cf_cash_from_borrowing": 52519.387537,
+      "financing_cf_cash_for_debt_repayment": 8715.209406,
+      "financing_cf_net_amount": -29405.088794,
+      "net_cash_flow": 492269639.37
+    },
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年半年度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2023HY"
+    ],
+    "unit": "元",
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年半年度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2023HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表",
+      "2、 母公司资产负债表"
+    ],
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年半年度报告.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "000999",
+      "2023HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "3、 合并利润表",
+      "4、 母公司利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 840094.3578649999,
+      "operating_expense_cost_of_sales": 378981.601982,
+      "operating_expense_selling_expenses": 215292.922279,
+      "operating_expense_administrative_expenses": 43564.702706000004,
+      "operating_expense_financial_expenses": -3284.7170260000003,
+      "operating_expense_rnd_expenses": 21501.216214,
+      "operating_expense_taxes_and_surcharges": 9026.539149,
+      "total_operating_expenses": 665082.265304,
+      "operating_profit": 181509.90357999998,
+      "total_profit": 181528.104528,
+      "other_income": 9116.305237999999,
+      "asset_impairment_loss": -2334.105928,
+      "credit_impairment_loss": -2678.572627,
+      "net_profit": 144859.837283
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年半年度报告.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "000999",
+      "2023HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "5、 合并现金流量表",
+      "6、 母公司现金流量表"
+    ],
+    "prev": {
+      "operating_cf_net_amount": 190270.46791500002,
+      "investing_cf_cash_from_investment_recovery": 141632.146841,
+      "investing_cf_cash_for_investments": 210000.555556,
+      "investing_cf_net_amount": -97670.212434,
+      "financing_cf_cash_from_borrowing": 22564.910381,
+      "financing_cf_cash_for_debt_repayment": 5215.209406,
+      "financing_cf_net_amount": 23637.308325,
+      "net_cash_flow": 1165585220.43
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年半年度报告摘要.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2023HY"
+    ],
+    "unit": "元",
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年年度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2023FY"
+    ],
+    "unit": "元",
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年年度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2023FY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表"
+    ],
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2023年年度报告摘要.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2023FY"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年一季度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2024Q1"
+    ],
+    "unit": "元",
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年一季度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2024Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表"
+    ],
+    "prev": {
+      "asset_inventory": 511249.644272,
+      "asset_construction_in_progress": 53779.608267999996,
+      "asset_total_assets": 4014845.5933080004,
+      "liability_accounts_payable": 236524.90886999998,
+      "liability_contract_liabilities": 165015.241383,
+      "liability_short_term_loans": 88565.067742,
+      "liability_total_liabilities": 1588658.199666,
+      "equity_unappropriated_profit": 1562602.105297,
+      "equity_total_equity": 2426187.393642
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年一季度报告.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "000999",
+      "2024Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "2、 合并利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 635240.831871,
+      "operating_expense_cost_of_sales": 291734.169708,
+      "operating_expense_selling_expenses": 140340.5075,
+      "operating_expense_administrative_expenses": 30911.308897000003,
+      "operating_expense_financial_expenses": -730.610645,
+      "operating_expense_rnd_expenses": 13259.701685,
+      "operating_expense_taxes_and_surcharges": 6590.346913,
+      "total_operating_expenses": 482105.424058,
+      "operating_profit": 151389.89993699998,
+      "total_profit": 150985.281884,
+      "other_income": 3993.785104,
+      "asset_impairment_loss": -2358.567807,
+      "credit_impairment_loss": -3188.982836,
+      "net_profit": 115103.01508800001
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年一季度报告.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "000999",
+      "2024Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "3、 合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_net_amount": 30116.68522,
+      "investing_cf_cash_from_investment_recovery": 19991.986079,
+      "investing_cf_cash_for_investments": 274.5,
+      "investing_cf_net_amount": 125222.155354,
+      "financing_cf_cash_from_borrowing": 76840.92265800001,
+      "financing_cf_cash_for_debt_repayment": 23839.375,
+      "financing_cf_net_amount": 52174.589301,
+      "net_cash_flow": 2074632727.57
+    },
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年三季度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2024Q3"
+    ],
+    "unit": "元",
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年三季度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2024Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 53779.608267999996,
+      "asset_total_assets": 4014845.5933080004,
+      "liability_accounts_payable": 236524.90886999998,
+      "liability_contract_liabilities": 165015.241383,
+      "liability_short_term_loans": 88565.067742
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年三季度报告.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "000999",
+      "2024Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "2、 合并年初到报告期末利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 1860800.595415,
+      "operating_expense_cost_of_sales": 897064.612653,
+      "operating_expense_selling_expenses": 476731.858613,
+      "operating_expense_administrative_expenses": 103959.533719,
+      "operating_expense_financial_expenses": -2051.985221,
+      "operating_expense_rnd_expenses": 45844.324793,
+      "operating_expense_taxes_and_surcharges": 19381.922691,
+      "total_operating_expenses": 1540930.267248,
+      "operating_profit": 325029.394621,
+      "total_profit": 324972.18130500003,
+      "other_income": 16541.066907,
+      "asset_impairment_loss": -7807.075042,
+      "credit_impairment_loss": -4268.346565999999,
+      "net_profit": 269517.908681
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年三季度报告.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "000999",
+      "2024Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "3、 合并年初到报告期末现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 2014736.853223,
+      "operating_cf_net_amount": 305017.505728,
+      "investing_cf_cash_from_investment_recovery": 93637.85710499999,
+      "investing_cf_cash_for_investments": 106774.5,
+      "investing_cf_net_amount": 25679.476378,
+      "financing_cf_cash_from_borrowing": 329553.61654099997,
+      "financing_cf_cash_for_debt_repayment": 161006.14063,
+      "financing_cf_net_amount": 45163.002499,
+      "net_cash_flow": 3764199183.85
+    },
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年半年度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2024HY"
+    ],
+    "unit": "元",
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年半年度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2024HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表",
+      "2、 母公司资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 53779.608267999996,
+      "asset_total_assets": 4014845.5933080004,
+      "liability_accounts_payable": 236524.90886999998,
+      "liability_contract_liabilities": 165015.241383,
+      "liability_short_term_loans": 88565.067742,
+      "liability_total_liabilities": 1588658.199666,
+      "equity_unappropriated_profit": 1562602.105297,
+      "equity_total_equity": 2426187.393642
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年半年度报告.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "000999",
+      "2024HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "3、 合并利润表",
+      "4、 母公司利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 1314612.569507,
+      "operating_expense_cost_of_sales": 628145.193208,
+      "operating_expense_selling_expenses": 328866.862158,
+      "operating_expense_administrative_expenses": 67744.757735,
+      "operating_expense_financial_expenses": -1318.544564,
+      "operating_expense_rnd_expenses": 29521.117036,
+      "operating_expense_taxes_and_surcharges": 13589.279063999998,
+      "total_operating_expenses": 1066548.664637,
+      "operating_profit": 249903.51249000002,
+      "total_profit": 249542.553225,
+      "other_income": 9145.201876000001,
+      "asset_impairment_loss": -1789.894725,
+      "credit_impairment_loss": -5826.77114,
+      "net_profit": 205985.96075899998
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年半年度报告.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "000999",
+      "2024HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "5、 合并现金流量表",
+      "6、 母公司现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 1332634.650006,
+      "operating_cf_net_amount": 177192.480601,
+      "investing_cf_cash_from_investment_recovery": 36331.507115,
+      "investing_cf_cash_for_investments": 8274.5,
+      "investing_cf_net_amount": 85975.612501,
+      "financing_cf_cash_from_borrowing": 281231.43671599997,
+      "financing_cf_cash_for_debt_repayment": 71966.670488,
+      "financing_cf_net_amount": 99538.56045399999,
+      "net_cash_flow": 3632772977.12
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年半年度报告摘要.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2024HY"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年年度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2024FY"
+    ],
+    "unit": "元",
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2024年年度报告摘要.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2024FY"
+    ],
+    "unit": "元",
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年一季度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2025Q1"
+    ],
+    "unit": "元",
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年一季度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2025Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 30671.761499,
+      "asset_total_assets": 4008197.2320769997,
+      "liability_accounts_payable": 232301.442267,
+      "liability_contract_liabilities": 186086.307245,
+      "liability_short_term_loans": 85556.742027,
+      "liability_total_liabilities": 1482565.89531,
+      "equity_unappropriated_profit": 1612109.3176129998,
+      "equity_total_equity": 2525631.3367669997
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年一季度报告.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "000999",
+      "2025Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "2、 合并利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 729407.055782,
+      "operating_expense_cost_of_sales": 339753.171814,
+      "operating_expense_selling_expenses": 156144.560369,
+      "operating_expense_administrative_expenses": 33868.322621,
+      "operating_expense_financial_expenses": -2365.616091,
+      "operating_expense_rnd_expenses": 13741.7359,
+      "operating_expense_taxes_and_surcharges": 7524.691935,
+      "total_operating_expenses": 548666.8665479999,
+      "operating_profit": 179789.060884,
+      "total_profit": 180314.56151300002,
+      "other_income": 4657.099757999999,
+      "asset_impairment_loss": -2053.818767,
+      "credit_impairment_loss": -3823.3174649999996,
+      "net_profit": 136382.596361
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年一季度报告.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "000999",
+      "2025Q1"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "3、 合并现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 680020.203552,
+      "operating_cf_net_amount": 78657.819224,
+      "investing_cf_cash_from_investment_recovery": 85737.083938,
+      "investing_cf_cash_for_investments": 101601.6756,
+      "investing_cf_net_amount": -25070.339451,
+      "financing_cf_cash_from_borrowing": 12434.168483,
+      "financing_cf_cash_for_debt_repayment": 10575.259867,
+      "financing_cf_net_amount": -2633.369055,
+      "net_cash_flow": 508968059.36
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年三季度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2025Q3"
+    ],
+    "unit": "元",
+    "tables": 5
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年三季度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2025Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表"
+    ],
+    "prev": {
+      "asset_inventory": 493268.28032200004,
+      "asset_construction_in_progress": 30671.761499,
+      "asset_total_assets": 4008197.2320769997,
+      "liability_accounts_payable": 232301.442267,
+      "liability_contract_liabilities": 186086.307245,
+      "liability_short_term_loans": 85556.742027,
+      "liability_total_liabilities": 1482565.89531,
+      "equity_unappropriated_profit": 1612109.3176129998,
+      "equity_total_equity": 2525631.3367669997
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年三季度报告.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "000999",
+      "2025Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "2、 合并年初到报告期末利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 1974028.6995360001,
+      "operating_expense_cost_of_sales": 934105.4994239999,
+      "operating_expense_selling_expenses": 475116.15526400006,
+      "operating_expense_administrative_expenses": 107353.496441,
+      "operating_expense_financial_expenses": -1332.645264,
+      "operating_expense_rnd_expenses": 51218.203476999995,
+      "operating_expense_taxes_and_surcharges": 20166.602738999998,
+      "total_operating_expenses": 1586627.3120809998,
+      "operating_profit": 388684.201103,
+      "total_profit": 398460.33857100003,
+      "other_income": 19199.89701,
+      "asset_impairment_loss": -11089.655632,
+      "credit_impairment_loss": -10029.566362,
+      "net_profit": 324471.74971
+    },
+    "tables": 2
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年三季度报告.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "000999",
+      "2025Q3"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "3、 合并年初到报告期末现金流量表"
+    ],
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年半年度报告.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2025HY"
+    ],
+    "unit": "元",
+    "tables": 1
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年半年度报告.pdf.md",
+    "table": "balance_sheet",
+    "key": [
+      "000999",
+      "2025HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "1、 合并资产负债表",
+      "2、 母公司资产负债表"
+    ],
+    "prev": {
+      "asset_construction_in_progress": 30671.761499,
+      "asset_total_assets": 4008197.2320769997,
+      "liability_accounts_payable": 232301.442267,
+      "liability_contract_liabilities": 186086.307245,
+      "liability_short_term_loans": 85556.742027,
+      "liability_total_liabilities": 1482565.89531,
+      "equity_unappropriated_profit": 1612109.3176129998,
+      "equity_total_equity": 2525631.3367669997
+    },
+    "tables": 6
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年半年度报告.pdf.md",
+    "table": "income_sheet",
+    "key": [
+      "000999",
+      "2025HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "3、 合并利润表",
+      "4、 母公司利润表"
+    ],
+    "prev": {
+      "total_operating_revenue": 1410601.276508,
+      "operating_expense_cost_of_sales": 655037.13181,
+      "operating_expense_selling_expenses": 331144.454992,
+      "operating_expense_administrative_expenses": 70626.526291,
+      "operating_expense_financial_expenses": -2467.046807,
+      "operating_expense_rnd_expenses": 32646.3099,
+      "operating_expense_taxes_and_surcharges": 14997.866769999999,
+      "total_operating_expenses": 1101985.242956,
+      "operating_profit": 314745.61835999996,
+      "total_profit": 315915.87273400003,
+      "other_income": 14385.472364,
+      "asset_impairment_loss": -2518.9204839999998,
+      "credit_impairment_loss": -7223.25231,
+      "net_profit": 257705.341152
+    },
+    "tables": 4
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年半年度报告.pdf.md",
+    "table": "cash_flow_sheet",
+    "key": [
+      "000999",
+      "2025HY"
+    ],
+    "unit": "元",
+    "source_titles": [
+      "5、 合并现金流量表",
+      "6、 母公司现金流量表"
+    ],
+    "prev": {
+      "operating_cf_cash_from_sales": 1385627.224691,
+      "operating_cf_net_amount": 236311.480727,
+      "investing_cf_cash_from_investment_recovery": 233689.543425,
+      "investing_cf_cash_for_investments": 396601.6756,
+      "investing_cf_net_amount": -191083.48313399998,
+      "financing_cf_cash_from_borrowing": 50140.006435,
+      "financing_cf_cash_for_debt_repayment": 50240.142805
+    },
+    "tables": 3
+  },
+  {
+    "file": "d:\\workplace\\泰迪杯\\b\\ocr_output\\merged\\华润三九：2025年半年度报告摘要.pdf.md",
+    "table": "core_performance_indicators_sheet",
+    "key": [
+      "000999",
+      "2025HY"
+    ],
+    "unit": "元",
+    "tables": 1
+  }
+]

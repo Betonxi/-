@@ -1,0 +1,12 @@
+{
+  "input_files": 36,
+  "parsed_files": 36,
+  "parse_failed_files": 0,
+  "rows": {
+    "core_performance_indicators_sheet": 24,
+    "balance_sheet": 23,
+    "cash_flow_sheet": 20,
+    "income_sheet": 19
+  },
+  "output": "d:\\workplace\\泰迪杯\\b\\task1_output_v2"
+}

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinChat 智能分析工作台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fafafa; color: #0f172a; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+.glass-panel { background: rgba(255,255,255,0.84); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(226,232,240,0.8); }
+.page-bg { background: radial-gradient(circle at top left, rgba(15,23,42,0.10), transparent 28%), radial-gradient(circle at top right, rgba(99,102,241,0.10), transparent 24%), linear-gradient(180deg, #f8fafc 0%, #ffffff 44%, #f8fafc 100%); }
+.card-glow { box-shadow: 0 20px 60px rgba(15,23,42,0.08); }
+.mode-btn.active, .role-btn.active, .chip-btn.active { background: #0f172a; color: white; border-color: #0f172a; }
+.trace-line::before { content: ''; position: absolute; left: 11px; top: 24px; bottom: -16px; width: 2px; background: #e2e8f0; }
+.soft-card { background: rgba(255,255,255,0.92); border: 1px solid #e2e8f0; border-radius: 28px; box-shadow: 0 12px 40px rgba(15,23,42,0.06); }
+.soft-gradient { background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,250,252,0.98) 56%, rgba(239,246,255,0.90) 100%); }
+.metric-tile { border: 1px solid #e2e8f0; border-radius: 22px; background: #f8fafc; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3 { font-weight: 700; margin: 1rem 0 0.6rem; }
+.markdown-body p { margin: 0.6rem 0; line-height: 1.8; }
+.markdown-body ul { list-style: disc; padding-left: 1.25rem; margin: 0.75rem 0; }
+.markdown-body ol { list-style: decimal; padding-left: 1.25rem; margin: 0.75rem 0; }
+.markdown-body code { background: #f1f5f9; padding: 0.12rem 0.35rem; border-radius: 0.35rem; }
+.markdown-body pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 0.85rem; overflow-x: auto; }
+
+/* ---- 微动画系统 ---- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-fade-in-up { animation: fadeInUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-fade-in    { animation: fadeIn    0.45s ease-out both; }
+.animate-scale-in   { animation: scaleIn   0.40s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-slide-in   { animation: slideInRight 0.50s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.delay-100 { animation-delay: 0.08s; }
+.delay-200 { animation-delay: 0.16s; }
+.delay-300 { animation-delay: 0.24s; }
+.delay-400 { animation-delay: 0.32s; }
+.delay-500 { animation-delay: 0.40s; }
+.delay-600 { animation-delay: 0.48s; }
+
+/* 按钮 micro-interaction */
+.btn-micro {
+  transition: transform 0.15s ease, box-shadow 0.25s ease, background-color 0.20s ease;
+  will-change: transform;
+}
+.btn-micro:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(15,23,42,0.08) !important;
+}
+
+/* 卡片 hover 浮动 */
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease;
+  will-change: transform;
+}
+.card-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 64px rgba(15,23,42,0.10);
+}
+
+/* 结果区域浮现 */
+.result-reveal {
+  animation: scaleIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 快捷示例 chip 点击反馈 */
+.chip-tap {
+  transition: all 0.20s ease;
+}
+.chip-tap:active {
+  transform: scale(0.96);
+}
+
+/* 可访问性：尊重用户减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up, .animate-fade-in, .animate-scale-in, .animate-slide-in, .result-reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .card-lift:hover { transform: none; }
+}
+</style>
+</head>
+<body class="page-bg antialiased selection:bg-slate-200 selection:text-slate-900">
+<nav class="fixed inset-x-0 top-0 z-50 glass-panel">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3 min-w-0">
+      <div class="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center shadow-lg shadow-slate-200 shrink-0">
+        <iconify-icon icon="solar:buildings-3-bold" width="18"></iconify-icon>
+      </div>
+      <div class="min-w-0">
+        <div class="text-sm font-semibold tracking-tight text-slate-900 truncate">FinChat</div>
+        <div class="text-[11px] text-slate-500 truncate">多智能体财报智能问数工作台</div>
+      </div>
+    </div>
+    <div class="hidden lg:flex items-center gap-3 text-xs text-slate-500">
+      <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">问数</span>
+      <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">评估</span>
+      <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">风险</span>
+      <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200">报告</span>
+    </div>
+    <a href="/" class="text-sm font-medium bg-slate-900 text-white px-4 py-2 rounded-xl hover:bg-slate-800 transition-all shadow-lg shadow-slate-200 whitespace-nowrap">返回首页</a>
+  </div>
+</nav>
+
+<main class="pt-24 pb-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <section class="soft-card soft-gradient p-6 lg:p-7 mb-6 overflow-hidden animate-fade-in-up">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 text-xs font-medium mb-4 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            FinChat Workspace
+          </div>
+          <h1 class="text-2xl lg:text-3xl font-semibold tracking-tight text-slate-900">FinChat 智能分析工作台</h1>
+          <p class="text-slate-600 mt-3 leading-7">面向医药生物行业的多角色、多源数据、多智能体协同分析入口，支持问数、评估、风险洞察与角色化报告生成。</p>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-slate-600">
+          <div class="metric-tile px-4 py-3">多角色视角</div>
+          <div class="metric-tile px-4 py-3">多智能体协同</div>
+          <div class="metric-tile px-4 py-3">结果可溯源</div>
+          <div class="metric-tile px-4 py-3">图表联动</div>
+          <div class="metric-tile px-4 py-3">黑板共享</div>
+          <div class="metric-tile px-4 py-3">Trace 链路</div>
+        </div>
+      </div>
+    </section>
+
+<section id="workspace" class="grid xl:grid-cols-[380px,1fr] gap-6 items-start">
+  <aside class="soft-card p-6 h-fit sticky top-24 animate-slide-in delay-100 card-lift">
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <div class="text-xl font-semibold text-slate-900">分析配置</div>
+        <div class="text-sm text-slate-500 mt-1">角色、模式、公司、年份</div>
+      </div>
+      <div class="w-11 h-11 rounded-2xl bg-slate-900 text-white flex items-center justify-center shrink-0"><iconify-icon icon="solar:widget-4-linear" width="20"></iconify-icon></div>
+    </div>
+
+    <div class="mb-6">
+      <div class="text-sm font-semibold text-slate-900 mb-3">角色视角</div>
+      <div class="grid grid-cols-3 gap-2">
+        <button class="role-btn active px-3 py-3 rounded-2xl border border-slate-200 text-sm font-medium btn-micro chip-tap" data-role="investor">投资者</button>
+        <button class="role-btn px-3 py-3 rounded-2xl border border-slate-200 text-sm font-medium btn-micro chip-tap" data-role="manager">管理者</button>
+        <button class="role-btn px-3 py-3 rounded-2xl border border-slate-200 text-sm font-medium btn-micro chip-tap" data-role="regulator">监管机构</button>
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <div class="text-sm font-semibold text-slate-900 mb-3">分析模式</div>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="mode-btn active px-3 py-3 rounded-2xl border border-slate-200 text-sm font-medium btn-micro chip-tap" data-mode="query">自然语言问数</button>
+        <button class="mode-btn px-3 py-3 rounded-2xl border border-slate-200 text-sm font-medium btn-micro chip-tap" data-mode="assessment">运营评估</button>
+        <button class="mode-btn px-3 py-3 rounded-2xl border border-slate-200 text-sm font-medium btn-micro chip-tap" data-mode="risk">风险洞察</button>
+        <button class="mode-btn px-3 py-3 rounded-2xl border border-slate-200 text-sm font-medium btn-micro chip-tap" data-mode="report">分析报告</button>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2 gap-4 mb-4">
+      <div>
+        <label class="block text-sm font-semibold text-slate-900 mb-2">公司</label>
+        <select id="stock" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-slate-900">
+          <option value="全部">全部</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-slate-900 mb-2">年份</label>
+        <select id="year" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-slate-900">
+          <option value="2024">2024</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label id="question-label" class="block text-sm font-semibold text-slate-900 mb-2">输入问题</label>
+      <textarea id="question" rows="5" class="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm outline-none resize-none focus:border-slate-900" placeholder="例如：华润三九近三年净利润趋势如何？"></textarea>
+    </div>
+
+    <div id="extra-wrap" class="mb-5 hidden">
+      <label class="block text-sm font-semibold text-slate-900 mb-2">补充要求</label>
+      <textarea id="extra" rows="3" class="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm outline-none resize-none focus:border-slate-900" placeholder="例如：重点关注研发投入趋势与现金流质量"></textarea>
+    </div>
+
+    <div id="query-conflict-hint" class="hidden mb-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800"></div>
+
+    <div class="mb-6">
+      <div class="text-sm font-semibold text-slate-900 mb-3">快捷示例</div>
+      <div id="chips" class="flex flex-wrap gap-2"></div>
+    </div>
+
+    <button id="submit-btn" class="w-full h-12 rounded-2xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 btn-micro shadow-xl shadow-slate-200/50 flex items-center justify-center gap-2">
+      <iconify-icon icon="solar:magic-stick-3-linear" width="18"></iconify-icon>
+      开始分析
+    </button>
+    <div id="status" class="text-sm text-slate-500 mt-4 min-h-[22px]"></div>
+
+    <div class="mt-6 rounded-3xl border border-emerald-100 bg-emerald-50/70 p-5 animate-fade-in delay-300">
+      <div class="text-sm font-semibold text-emerald-800 mb-3">推荐演示链路</div>
+      <div class="space-y-2 text-sm text-emerald-700 leading-relaxed">
+        <div>1. 选公司与角色</div>
+        <div>2. 先做自然语言问数</div>
+        <div>3. 再展示运营评估与雷达图</div>
+        <div>4. 接着展示风险机会分析</div>
+        <div>5. 最后生成角色化报告，并查看引用、图表、黑板和 Trace</div>
+      </div>
+    </div>
+  </aside>
+
+  <div id="results" class="space-y-6">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="metric-tile p-5 card-lift animate-fade-in-up delay-100">
+        <div class="text-xs uppercase tracking-[0.16em] text-slate-400 mb-2">当前角色</div>
+        <div id="summary-role" class="text-lg font-semibold text-slate-900">投资者</div>
+      </div>
+      <div class="metric-tile p-5 card-lift animate-fade-in-up delay-200">
+        <div class="text-xs uppercase tracking-[0.16em] text-slate-400 mb-2">分析模式</div>
+        <div id="summary-mode" class="text-lg font-semibold text-slate-900">自然语言问数</div>
+      </div>
+      <div class="metric-tile p-5 card-lift animate-fade-in-up delay-300">
+        <div class="text-xs uppercase tracking-[0.16em] text-slate-400 mb-2">分析对象</div>
+        <div id="summary-target" class="text-lg font-semibold text-slate-900">华润三九 · 2024</div>
+        <div id="summary-target-note" class="text-xs text-slate-500 mt-2">问数模式下，问题未显式写明公司/年份时默认采用左侧选择</div>
+      </div>
+    </div>
+
+    <div class="soft-card p-8 min-h-[240px] animate-fade-in-up delay-100 card-lift">
+      <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
+        <div>
+          <div class="text-xl font-semibold text-slate-900">分析结果</div>
+          <div class="text-sm text-slate-500 mt-1">本次任务输出</div>
+        </div>
+        <div id="agent-badge" class="px-3 py-2 rounded-xl bg-slate-100 text-slate-600 text-sm font-medium">待执行</div>
+      </div>
+      <div id="phase-bar" class="hidden mb-4 rounded-2xl bg-emerald-50 border border-emerald-100 px-4 py-3">
+        <div class="flex items-center gap-3">
+          <div class="w-4 h-4 rounded-full border-2 border-emerald-500 border-t-transparent animate-spin"></div>
+          <span id="phase-agent" class="text-sm font-semibold text-emerald-700"></span>
+          <span id="phase-detail" class="text-sm text-emerald-600"></span>
+        </div>
+        <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-emerald-100">
+          <div id="phase-progress" class="h-full rounded-full bg-gradient-to-r from-emerald-500 to-green-400 transition-all duration-500 animate-pulse" style="width: 10%"></div>
+        </div>
+      </div>
+      <div id="answer" class="markdown-body text-[15px] text-slate-700 leading-8">
+        你可以直接提问，例如：<br>
+        <span class="text-slate-900 font-medium">华润三九近三年净利润趋势如何？</span>
+      </div>
+    </div>
+
+    <div id="radar-card" class="hidden soft-card p-8 result-reveal card-lift">
+      <div class="text-xl font-semibold text-slate-900 mb-2">五维评分雷达图</div>
+      <div class="text-sm text-slate-500 mb-4">基于运营评估结果自动生成</div>
+      <div id="radar-chart" class="w-full h-[420px]"></div>
+    </div>
+
+    <div id="charts-card" class="hidden soft-card p-8 result-reveal card-lift">
+      <div class="text-xl font-semibold text-slate-900 mb-5">结果附图</div>
+      <div id="charts" class="grid lg:grid-cols-2 gap-4"></div>
+    </div>
+
+    <div class="grid xl:grid-cols-2 gap-6">
+      <div id="refs-card" class="hidden soft-card p-8 result-reveal card-lift">
+        <div class="text-xl font-semibold text-slate-900 mb-5">数据来源溯源</div>
+        <div id="refs" class="space-y-3"></div>
+      </div>
+
+      <div id="blackboard-card" class="hidden soft-card p-8 result-reveal card-lift">
+        <div class="text-xl font-semibold text-slate-900 mb-5">共享黑板</div>
+        <pre id="blackboard" class="bg-slate-50 text-slate-700 rounded-2xl p-4 text-xs overflow-auto border border-slate-200"></pre>
+      </div>
+    </div>
+
+    <div id="trace-card" class="hidden soft-card p-8 result-reveal card-lift">
+      <div class="text-xl font-semibold text-slate-900 mb-5">执行链路与归因分析</div>
+      <div id="trace" class="space-y-4"></div>
+    </div>
+  </div>
+</section>
+  </div>
+</main>
+
+<script>
+const modeTitles = {
+  query: '输入问题',
+  assessment: '评估说明',
+  risk: '分析说明',
+  report: '报告主题'
+};
+
+const roleNames = {
+  investor: '投资者',
+  manager: '管理者',
+  regulator: '监管机构'
+};
+
+const modeNames = {
+  query: '自然语言问数',
+  assessment: '运营评估',
+  risk: '风险洞察',
+  report: '分析报告'
+};
+
+const state = {
+  role: 'investor',
+  mode: 'query'
+};
+
+const roleButtons = Array.from(document.querySelectorAll('.role-btn'));
+const modeButtons = Array.from(document.querySelectorAll('.mode-btn'));
+const chipsWrap = document.getElementById('chips');
+const questionInput = document.getElementById('question');
+const extraInput = document.getElementById('extra');
+const stockInput = document.getElementById('stock');
+const yearInput = document.getElementById('year');
+const extraWrap = document.getElementById('extra-wrap');
+const questionLabel = document.getElementById('question-label');
+const queryConflictHintEl = document.getElementById('query-conflict-hint');
+const submitBtn = document.getElementById('submit-btn');
+const phaseBar = document.getElementById('phase-bar');
+const phaseAgentEl = document.getElementById('phase-agent');
+const phaseDetailEl = document.getElementById('phase-detail');
+const phaseProgressEl = document.getElementById('phase-progress');
+const statusEl = document.getElementById('status');
+const answerEl = document.getElementById('answer');
+const agentBadgeEl = document.getElementById('agent-badge');
+const chartsCard = document.getElementById('charts-card');
+const chartsEl = document.getElementById('charts');
+const refsCard = document.getElementById('refs-card');
+const refsEl = document.getElementById('refs');
+const traceCard = document.getElementById('trace-card');
+const traceEl = document.getElementById('trace');
+const blackboardCard = document.getElementById('blackboard-card');
+const blackboardEl = document.getElementById('blackboard');
+const radarCard = document.getElementById('radar-card');
+const summaryRoleEl = document.getElementById('summary-role');
+const summaryModeEl = document.getElementById('summary-mode');
+const summaryTargetEl = document.getElementById('summary-target');
+const summaryTargetNoteEl = document.getElementById('summary-target-note');
+
+let phaseProgressValue = 10;
+
+function currentStockLabel() {
+  return stockInput.value === '全部' ? '全部（数据库覆盖公司）' : stockInput.value;
+}
+
+function extractQuestionTarget() {
+  const question = questionInput.value.trim();
+  const companies = Array.from(stockInput.options)
+    .map(option => option.value)
+    .filter(value => value && value !== '全部')
+    .sort((a, b) => b.length - a.length);
+  const company = companies.find(name => question.includes(name)) || null;
+  const yearOptions = new Set(Array.from(yearInput.options).map(option => String(option.value)));
+  const yearMatches = question.match(/20\d{2}/g) || [];
+  const year = yearMatches.find(value => yearOptions.has(value)) || null;
+  return { company, year };
+}
+
+function getEffectiveTarget() {
+  const selectedCompany = stockInput.value;
+  const selectedYear = String(yearInput.value);
+  if (state.mode !== 'query') {
+    return {
+      company: selectedCompany,
+      year: selectedYear,
+      note: '当前模式以左侧选择为准',
+      hint: '',
+      hasHint: false,
+      warning: false
+    };
+  }
+  const detected = extractQuestionTarget();
+  const company = detected.company || selectedCompany;
+  const year = detected.year || selectedYear;
+  const companyDiffers = Boolean(detected.company && detected.company !== selectedCompany && selectedCompany !== '全部');
+  const yearDiffers = Boolean(detected.year && detected.year !== selectedYear);
+  const warning = companyDiffers || yearDiffers;
+  const hintParts = [];
+  if (detected.company) hintParts.push(`公司：${detected.company}`);
+  if (detected.year) hintParts.push(`年份：${detected.year}`);
+  const hasHint = hintParts.length > 0;
+  const hint = hasHint
+    ? warning
+      ? `检测到问题中显式写明 ${hintParts.join('，')}，系统将以问题文本为准。`
+      : `问题中已显式写明 ${hintParts.join('，')}，系统将按该目标执行。`
+    : '';
+  return {
+    company,
+    year,
+    note: hasHint ? '问数模式下，问题文本中的显式公司/年份优先于左侧选择' : '问数模式下，问题未显式写明公司/年份时默认采用左侧选择',
+    hint,
+    hasHint,
+    warning
+  };
+}
+
+function renderTargetConsistency() {
+  const effective = getEffectiveTarget();
+  const targetLabel = effective.company === '全部' ? '全部（数据库覆盖公司）' : effective.company;
+  summaryTargetEl.textContent = `${targetLabel} · ${effective.year}`;
+  summaryTargetNoteEl.textContent = effective.note;
+  if (!effective.hasHint) {
+    queryConflictHintEl.className = 'hidden mb-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800';
+    queryConflictHintEl.textContent = '';
+    return;
+  }
+  queryConflictHintEl.className = effective.warning
+    ? 'mb-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800'
+    : 'mb-4 rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-700';
+  queryConflictHintEl.textContent = effective.hint;
+}
+
+function getQuickExamples() {
+  return {
+    query: [
+      '华润三九近三年净利润趋势如何？',
+      '金花股份2024年营业收入是多少？',
+      '华润三九的营业收入增长是不是短板？',
+      '金花股份2024年的现金流质量怎么样？'
+    ],
+    assessment: [
+      '评估华润三九2024年的运营状况',
+      '给金花股份做一个企业运营评分',
+      '从管理者视角诊断华润三九短板'
+    ],
+    risk: [
+      '华润三九有哪些风险与机会？',
+      '金花股份有没有现金流风险？',
+      '从监管角度看金花股份有哪些异常信号？'
+    ],
+    report: [
+      '生成华润三九2024年投资分析报告',
+      '生成金花股份2024年运营诊断报告',
+      '从监管视角输出华润三九风险审查报告'
+    ]
+  };
+}
+
+function activateButtons(buttons, activeValue, key) {
+  buttons.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset[key] === activeValue);
+  });
+}
+
+function updateSummary() {
+  summaryRoleEl.textContent = roleNames[state.role] || '未选择';
+  summaryModeEl.textContent = modeNames[state.mode] || '未选择';
+  renderTargetConsistency();
+}
+
+function renderChips() {
+  const quickExamples = getQuickExamples();
+  chipsWrap.innerHTML = '';
+  (quickExamples[state.mode] || []).forEach((text, idx) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `chip-btn px-3 py-2 rounded-xl border border-slate-200 text-sm font-medium text-slate-600 hover:border-slate-900 hover:text-slate-900 transition-colors chip-tap btn-micro ${idx === 0 ? 'active' : ''}`;
+    button.textContent = text;
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.chip-btn').forEach(node => node.classList.remove('active'));
+      button.classList.add('active');
+      questionInput.value = text;
+      updateSummary();
+    });
+    chipsWrap.appendChild(button);
+  });
+  const first = quickExamples[state.mode]?.[0] || '';
+  if (state.mode === 'query' && !questionInput.value) questionInput.value = first;
+  questionLabel.textContent = modeTitles[state.mode];
+  extraWrap.classList.toggle('hidden', state.mode !== 'report');
+  queryConflictHintEl.classList.toggle('hidden', state.mode !== 'query' || !queryConflictHintEl.textContent);
+  if (state.mode === 'assessment') questionInput.placeholder = '例如：重点关注盈利能力与现金流质量';
+  else if (state.mode === 'risk') questionInput.placeholder = '例如：从投资角度看风险是否可控';
+  else if (state.mode === 'report') questionInput.placeholder = `例如：生成${currentStockLabel()}${yearInput.value}年投资分析报告`;
+  else questionInput.placeholder = `例如：${currentStockLabel()}近三年净利润趋势如何？`;
+  updateSummary();
+}
+
+function formatInlineMarkdown(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>');
+}
+
+function formatMarkdown(text) {
+  const escaped = (text || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  const lines = escaped.split('\n');
+  const html = [];
+  let inList = false;
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed) {
+      if (inList) {
+        html.push('</ul>');
+        inList = false;
+      }
+      return;
+    }
+    if (trimmed.startsWith('### ')) {
+      if (inList) {
+        html.push('</ul>');
+        inList = false;
+      }
+      html.push(`<h3>${formatInlineMarkdown(trimmed.slice(4))}</h3>`);
+      return;
+    }
+    if (trimmed.startsWith('## ')) {
+      if (inList) {
+        html.push('</ul>');
+        inList = false;
+      }
+      html.push(`<h2>${formatInlineMarkdown(trimmed.slice(3))}</h2>`);
+      return;
+    }
+    if (trimmed.startsWith('# ')) {
+      if (inList) {
+        html.push('</ul>');
+        inList = false;
+      }
+      html.push(`<h1>${formatInlineMarkdown(trimmed.slice(2))}</h1>`);
+      return;
+    }
+    if (trimmed.startsWith('- ')) {
+      if (!inList) {
+        html.push('<ul>');
+        inList = true;
+      }
+      html.push(`<li>${formatInlineMarkdown(trimmed.slice(2))}</li>`);
+      return;
+    }
+    if (inList) {
+      html.push('</ul>');
+      inList = false;
+    }
+    html.push(`<p>${formatInlineMarkdown(trimmed)}</p>`);
+  });
+
+  if (inList) html.push('</ul>');
+  return html.join('') || '<p>暂无结果</p>';
+}
+
+function setLoading(loading) {
+  submitBtn.disabled = loading;
+  submitBtn.classList.toggle('opacity-60', loading);
+  submitBtn.innerHTML = loading
+    ? '<iconify-icon icon="solar:refresh-linear" width="18" class="animate-spin"></iconify-icon> 分析中...'
+    : '<iconify-icon icon="solar:magic-stick-3-linear" width="18"></iconify-icon> 开始分析';
+  if (loading) {
+    statusEl.textContent = '分析开始...';
+    agentBadgeEl.textContent = '系统就绪';
+    agentBadgeEl.className = 'px-3 py-2 rounded-xl bg-emerald-100 text-emerald-700 text-sm font-medium';
+    answerEl.innerHTML = '';
+    phaseBar.classList.remove('hidden');
+    phaseAgentEl.textContent = 'Orchestrator';
+    phaseDetailEl.textContent = '等待调度...';
+    phaseProgressValue = 10;
+    phaseProgressEl.style.width = '10%';
+    chartsCard.classList.add('hidden');
+    refsCard.classList.add('hidden');
+    traceCard.classList.add('hidden');
+    blackboardCard.classList.add('hidden');
+    radarCard.classList.add('hidden');
+    chartsEl.innerHTML = '';
+    refsEl.innerHTML = '';
+    traceEl.innerHTML = '';
+    blackboardEl.textContent = '';
+  } else {
+    hidePhase();
+  }
+}
+
+function renderRadar(scores) {
+  const companies = Object.keys(scores || {});
+  if (!companies.length) {
+    radarCard.classList.add('hidden');
+    return;
+  }
+  const labels = ['盈利能力', '成长能力', '运营效率', '偿债能力', '现金流质量'];
+  const traces = companies.map((company) => ({
+    type: 'scatterpolar',
+    r: [...labels.map(label => scores[company][label] ?? 50), scores[company][labels[0]] ?? 50],
+    theta: [...labels, labels[0]],
+    fill: 'toself',
+    name: company,
+    opacity: 0.5
+  }));
+  Plotly.newPlot('radar-chart', traces, {
+    paper_bgcolor: 'white',
+    plot_bgcolor: 'white',
+    margin: { l: 20, r: 20, t: 20, b: 20 },
+    polar: { radialaxis: { visible: true, range: [0, 100] } },
+    legend: { orientation: 'h' }
+  }, { displayModeBar: false, responsive: true });
+  radarCard.classList.remove('hidden');
+}
+
+function renderCharts(charts) {
+  if (!charts || !charts.length) {
+    chartsCard.classList.add('hidden');
+    return;
+  }
+  chartsEl.innerHTML = charts.map(src => `
+    <div class="rounded-3xl overflow-hidden border border-slate-200 bg-slate-50">
+      <img src="${src}" class="w-full h-full object-cover" alt="chart">
+    </div>
+  `).join('');
+  chartsCard.classList.remove('hidden');
+}
+
+function renderRefs(refs) {
+  if (!refs || !refs.length) {
+    refsCard.classList.add('hidden');
+    return;
+  }
+  refsEl.innerHTML = refs.map(ref => `
+    <div class="rounded-2xl border border-blue-100 bg-blue-50/50 p-4">
+      <div class="text-sm font-semibold text-slate-900 mb-1">${ref.paper_path || ''}</div>
+      <div class="text-sm text-slate-600 leading-7">${(ref.text || '').slice(0, 240)}</div>
+    </div>
+  `).join('');
+  refsCard.classList.remove('hidden');
+}
+
+function renderTrace(trace) {
+  if (!trace || !trace.length) {
+    traceCard.classList.add('hidden');
+    return;
+  }
+  traceEl.innerHTML = trace.map((step, idx) => `
+    <div class="relative ${idx !== trace.length - 1 ? 'trace-line' : ''} pl-8">
+      <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-[11px] font-semibold">${idx + 1}</div>
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+        <div class="flex flex-wrap items-center gap-2 mb-2">
+          <span class="px-2 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">${step.agent}</span>
+          <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">${step.action}</span>
+          <span class="text-xs text-slate-400">${step.duration_ms || 0} ms</span>
+        </div>
+        <div class="text-sm font-semibold text-slate-900 mb-2">${step.detail || ''}</div>
+        <div class="text-xs text-slate-500 leading-6">输入：${step.input_summary || '-'}<br>输出：${step.output_summary || '-'}${step.source ? `<br>来源：${step.source}` : ''}</div>
+      </div>
+    </div>
+  `).join('');
+  traceCard.classList.remove('hidden');
+}
+
+function renderBlackboard(blackboard) {
+  if (!blackboard || !Object.keys(blackboard).length) {
+    blackboardCard.classList.add('hidden');
+    return;
+  }
+  blackboardEl.textContent = JSON.stringify(blackboard, null, 2);
+  blackboardCard.classList.remove('hidden');
+}
+
+function escapeHtml(text) {
+  return (text || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function setPhaseProgress(value) {
+  phaseProgressValue = Math.max(10, Math.min(100, value));
+  phaseProgressEl.style.width = `${phaseProgressValue}%`;
+}
+
+function getPhaseProgress(agent, detail) {
+  const phaseText = `${agent || ''} ${detail || ''}`;
+  if (phaseText.includes('意图')) return 10;
+  if (phaseText.includes('报告第 1 步') || agent === 'QueryAgent') return 35;
+  if (phaseText.includes('报告第 2 步') || agent === 'AssessmentAgent') return 50;
+  if (phaseText.includes('报告第 3 步') || agent === 'RiskAgent') return 65;
+  if (phaseText.includes('报告第 4 步') || agent === 'ReportAgent') return 85;
+  if (agent === 'Orchestrator') return 20;
+  return 25;
+}
+
+function showPhase(agent, detail) {
+  phaseBar.classList.remove('hidden');
+  phaseAgentEl.textContent = agent;
+  phaseDetailEl.textContent = detail;
+  agentBadgeEl.textContent = '思考中';
+  agentBadgeEl.className = 'px-3 py-2 rounded-xl bg-emerald-100 text-emerald-700 text-sm font-medium';
+  setPhaseProgress(getPhaseProgress(agent, detail));
+}
+
+function hidePhase() {
+  phaseBar.classList.add('hidden');
+  phaseProgressValue = 10;
+  phaseProgressEl.style.width = '10%';
+}
+
+function renderStreamingAnswer(text) {
+  answerEl.innerHTML = `<div class="whitespace-pre-wrap leading-8 text-slate-700">${escapeHtml(text)}<span class="text-slate-400">▌</span></div>`;
+}
+
+function applyAnalysisResult(result) {
+  phaseAgentEl.textContent = result.agent_name || 'FinChat';
+  phaseDetailEl.textContent = '分析完成';
+  setPhaseProgress(100);
+  agentBadgeEl.textContent = result.agent_name || '已完成';
+  agentBadgeEl.className = 'px-3 py-2 rounded-xl bg-slate-100 text-slate-600 text-sm font-medium';
+  answerEl.innerHTML = formatMarkdown(result.content || '暂无结果');
+  renderCharts(result.charts || []);
+  renderRefs(result.references || []);
+  renderTrace(result.trace || []);
+  renderBlackboard(result.blackboard || {});
+  renderRadar(result.metadata?.scores || {});
+  statusEl.textContent = result.error ? `执行异常：${result.error}` : '分析完成';
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function parseStreamEvent(block) {
+  const lines = block.split('\n');
+  let event = 'message';
+  const dataLines = [];
+  lines.forEach((line) => {
+    if (line.startsWith('event:')) event = line.slice(6).trim();
+    if (line.startsWith('data:')) dataLines.push(line.slice(5).trim());
+  });
+  if (!dataLines.length) return null;
+  return {
+    event,
+    data: JSON.parse(dataLines.join('\n'))
+  };
+}
+
+async function analyze() {
+  const payload = {
+    mode: state.mode,
+    role: state.role,
+    question: questionInput.value.trim(),
+    stock: stockInput.value,
+    year: Number(yearInput.value),
+    extra: extraInput.value.trim()
+  };
+
+  if (state.mode === 'query' && !payload.question) {
+    statusEl.textContent = '请输入问题';
+    return;
+  }
+
+  updateSummary();
+  setLoading(true);
+  try {
+    const response = await fetch('/api/analyze/stream', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (!response.ok) {
+      const errorText = await response.text();
+      try {
+        const errorData = JSON.parse(errorText);
+        throw new Error(errorData.detail || '请求失败');
+      } catch {
+        throw new Error(errorText || '请求失败');
+      }
+    }
+    if (!response.body) throw new Error('当前环境不支持流式输出');
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder('utf-8');
+    let buffer = '';
+    let finalResult = null;
+
+    while (true) {
+      const { value, done } = await reader.read();
+      buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
+
+      let boundary = buffer.indexOf('\n\n');
+      while (boundary !== -1) {
+        const rawBlock = buffer.slice(0, boundary).trim();
+        buffer = buffer.slice(boundary + 2);
+        if (rawBlock) {
+          const parsed = parseStreamEvent(rawBlock);
+          if (parsed?.event === 'phase') {
+            showPhase(parsed.data.agent, parsed.data.detail);
+          } else if (parsed?.event === 'token') {
+            phaseBar.classList.remove('hidden');
+            phaseAgentEl.textContent = phaseAgentEl.textContent || 'FinChat';
+            phaseDetailEl.textContent = '正在生成回答...';
+            setPhaseProgress(85);
+            agentBadgeEl.textContent = '生成中';
+            agentBadgeEl.className = 'px-3 py-2 rounded-xl bg-emerald-100 text-emerald-700 text-sm font-medium';
+            statusEl.textContent = '正在生成回答...';
+            renderStreamingAnswer(parsed.data.content || '');
+          } else if (parsed?.event === 'result') {
+            finalResult = parsed.data.result || null;
+          } else if (parsed?.event === 'error') {
+            throw new Error(parsed.data.detail || '请求失败');
+          }
+        }
+        boundary = buffer.indexOf('\n\n');
+      }
+
+      if (done) break;
+    }
+
+    if (!finalResult) throw new Error('流式输出异常结束');
+    applyAnalysisResult(finalResult);
+  } catch (error) {
+    agentBadgeEl.textContent = '执行失败';
+    agentBadgeEl.className = 'px-3 py-2 rounded-xl bg-red-100 text-red-700 text-sm font-medium';
+    answerEl.innerHTML = `<div class="text-red-600">${error.message}</div>`;
+    statusEl.textContent = `执行失败：${error.message}`;
+  } finally {
+    setLoading(false);
+  }
+}
+
+roleButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    state.role = btn.dataset.role;
+    activateButtons(roleButtons, state.role, 'role');
+    updateSummary();
+  });
+});
+
+modeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    state.mode = btn.dataset.mode;
+    activateButtons(modeButtons, state.mode, 'mode');
+    renderChips();
+  });
+});
+
+stockInput.addEventListener('change', () => {
+  updateSummary();
+  renderChips();
+});
+yearInput.addEventListener('change', () => {
+  updateSummary();
+  renderChips();
+});
+questionInput.addEventListener('input', () => {
+  updateSummary();
+});
+
+submitBtn.addEventListener('click', analyze);
+questionInput.addEventListener('keydown', (event) => {
+  if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') analyze();
+});
+
+async function initWorkspace() {
+  activateButtons(roleButtons, state.role, 'role');
+  activateButtons(modeButtons, state.mode, 'mode');
+  try {
+    await loadOptions();
+  } catch (error) {
+    statusEl.textContent = error.message;
+  }
+  renderChips();
+  updateSummary();
+}
+
+initWorkspace();
+</script>
+</body>
+</html>
